@@ -1,0 +1,44 @@
+@keyframes bars {
+    0%, 40%, 100% {
+        transform: scaleY(0.5);
+    }
+    20% {
+        transform: scaleY(1.0);
+    }
+}
+
+@mixin loader {
+    height:1.25em;
+    width:2.75em;
+    line-height:normal;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    transition-property:opacity;
+    transition-duration:0.15s;
+    transition-timing-function:linear;
+    list-style-type:none;
+    display:none;
+    & > li {
+        display:inline-block;
+        height:100%;
+        width:0.3em;
+        background-color:#FFF;
+        animation: bars 1.2s infinite ease-in-out;
+        &.one {
+            animation-delay:-1.1s;
+        }
+        &.two {
+            animation-delay:-1.0s;
+        }
+        &.three {
+            animation-delay:-0.9s;
+        }
+        &.four {
+            animation-delay:-0.8s;
+        }
+    }
+}

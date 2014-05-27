@@ -1,0 +1,24 @@
+<section ng-class="{'gallery-loaded':galleryLoaded}" class="gallery-thumbnails">
+
+    <div class="gallery-controls">
+        <div class="sort-controls">
+            <span class="label">SORT:</span>
+            <span ng-repeat="(t, term) in sort.terms" ng-click="sort.sortGallery(t);" ng-class="{active:sort.terms[t].active,reversed:sort.terms[t].reversed}" class="sort-control-item">{{term.label | uppercase }}</span>
+            <span ng-click="sort.reset();" class="sort-control-item random">RANDOM</span>
+        </div>
+        <div ng-class="{minZoom:zoom<=0.5,maxZoom:zoom>=1}" class="zoom-controls">
+            <span ng-click="zoom = defaultZoom" class="zoom-reset">{{ zoom === defaultZoom ? 'ZOOM' : 'RESET' }}</span>
+            <span ng-click="zoom = zoom - 0.3" class="zoom-minus">-</span>
+            <span ng-click="zoom = zoom + 0.3" class="zoom-plus">+</span>
+        </div>
+    </div>
+
+    <div loader-indicator="hideLoader"></div>
+
+    <div class="gallery-rows">
+        <div ng-repeat="(r, row) in rows" class="gallery-row" >
+            <span ng-repeat="photo in row" gallery-thumbnail="photo" row-height="{{rowHeights[r]}}"></span>
+        </div>
+    </div>
+
+</section>

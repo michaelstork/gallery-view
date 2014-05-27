@@ -1,0 +1,62 @@
+@import 'imports/mixins.scss';
+@import 'imports/queries.scss';
+@import 'imports/fonts.scss';
+$border:8px solid transparent;
+$bg:desaturate(#F9EFBE, 75%);
+$navHeight:2.5em;
+$trebuchet:'Trebuchet MS', sans-serif;
+$josefin:"josefin_sansregular", sans-serif;
+$josefinBold:"josefin_sansbold", sans-serif;
+$pt:"PT Sans", sans-serif;
+$dark:#484848;
+$darker:#373737;
+$darkest:#252525;
+$notdark:lighten($dark, 40%);
+$light:lighten($bg, 20%);
+html {
+    height:100%;
+}
+$footerHeight:30em;
+body {
+    min-height:100%;
+    position:relative;
+    font-family:sans-serif;
+}
+
+ul, p {
+    margin:0;
+    padding:0;
+}
+
+a {
+    color:#999;
+    text-decoration:none;
+    &:hover {
+        text-decoration:underline;
+    }
+}
+
+.main {
+    z-index:1;
+    position:relative;
+    min-height:1000px;
+    width:100%;
+    background-color:$bg;
+    padding-top:$navHeight * 2;
+    box-shadow:2px 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.preloader {
+    top:-100%;
+    width:0;
+    height:0;
+    overflow:hidden;
+    z-index:0;
+    position:absolute;
+}
+
+footer {
+    width:100%;
+    text-align:center;
+    height:$footerHeight;
+}

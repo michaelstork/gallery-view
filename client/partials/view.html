@@ -1,0 +1,20 @@
+<div ng-class="{'photo-loaded':photoLoaded}" class="photo-viewer">
+
+    <div class="slideshow-controls" ng-class="{'slideshow-playing':slideshowControls.slideshowInterval}" ng-click="$event.stopPropagation()">
+        <span ng-click="slideshowControls.resume()" class="slideshow-play"></span>
+        <span ng-click="slideshowControls.stop()" class="slideshow-stop"></span>
+    </div>
+
+    <div class="photo-wrap">
+        <img ng-src="{{ photo.uri }}" alt="{{ photo.title }}" title="{{ photo.title}}" class="photo-viewer-img" />
+        <p class="photo-viewer-title">{{ photo.title }}</p>
+    </div>
+
+    <div class="nav nav-left"><span></span></div>
+    <div class="nav nav-right"><span></span></div>
+
+    <span class="photo-viewer-close">+</span>
+
+    <div loader-indicator="photoLoaded"></div>
+
+</div>

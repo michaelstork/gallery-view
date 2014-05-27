@@ -1,0 +1,14 @@
+
+@media (min-width:1301px) {
+    .gallery-thumbnails {
+        width:74%;
+        margin-right:auto;
+        margin-left:auto;
+    }
+}
+@media (max-width:800px) {
+    .gallery-thumbnails {
+        width:100%;
+        margin-left:0;
+    }
+}

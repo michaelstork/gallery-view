@@ -1,0 +1,19 @@
+<div ng-class="{'footer-loaded':footerLoaded}" class="gallery-footer">
+
+    <span class="preview-header">OTHER GALLERIES:</span>
+
+    <div ng-style="previewScroll.style" class="preview-wrap">
+
+        <div loader-indicator="footerLoaded"></div>
+
+        <a ng-repeat="(i, gallery) in previews" href="#/{{gallery[activePreview].gallery}}" class="preview-cont">
+            <span class="gallery-title">{{gallery[activePreview].gallery | uppercase}}</span>
+            <img ng-src="{{gallery[activePreview].src}}" class="preview-img" />
+        </a>
+
+    </div>
+
+    <span ng-click="previewScroll.scroll(1)" ng-show="previewScroll.plus" class="preview-scroll preview-scroll-plus"><span></span></span>
+    <span ng-click="previewScroll.scroll(-1)" ng-show="previewScroll.minus" class="preview-scroll preview-scroll-minus"><span></span></span>
+
+</div>

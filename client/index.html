@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html ng-app="galleryView" ng-controller="BaseCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <title ng-cloak>{{ pageTitle }}</title>
+        <link href="css/gallery-view.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <header ui-view="nav" ng-hide="fullscreen" class="nav"></header>
+
+        <main ui-view="main" class="main" style="min-height:{{mainHeight}};" autoscroll="true"></main>
+
+        <footer ui-view="footer"></footer>
+
+        <div preloader></div>
+
+        <script src="js/gallery-view.js"></script>
+    </body>
+
+</html>

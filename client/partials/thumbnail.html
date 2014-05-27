@@ -1,0 +1,10 @@
+<a hover-timer="250" hover-class="show-info" ng-class="{'thumbnail-loaded':thumbnailLoaded}" class="thumbnail-cont" href="#/{{photo.gallery}}/{{photo.filename}}">
+  
+    <img class="gallery-thumbnail" ng-style="imgStyle" ng-src="{{photo.src}}" />
+    <div class="thumbnail-info">
+        <span class="thumbnail-title">{{photo.title}}</span>
+    </div>
+
+    <div loader-indicator="thumbnailLoaded"></div>
+
+</a>

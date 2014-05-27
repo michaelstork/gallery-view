@@ -1,0 +1,107 @@
+.gallery-thumbnails.gallery-loaded {
+    .gallery-controls {
+        opacity:1;
+    }
+}
+.gallery-controls {
+    width:100%;
+    opacity:0;
+    transition:opacity 0.15s linear;
+    margin-bottom:0.2em;
+    font-family:$josefinBold;
+    font-size:1em;
+    color:#999;
+    overflow:visible;
+    & > div {
+        box-sizing:border-box;
+        float:left;
+    }
+    &:before, &:after {
+        content:" ";
+        display:table;
+    }
+    &:after {
+        clear:both;
+    }
+}
+.sort-controls {
+    text-align:left;
+    position:relative;
+    width:75%;
+    .label {
+        padding-left:0.15em;
+        & + .sort-control-item {
+            border-left:none;
+        }
+    }
+    .sort-control-item {
+        border-left:1px solid #999;
+        padding:0 1.25em 0 0.5em;
+        cursor:pointer;
+        white-space:nowrap;
+        &.random {
+            color:#676767;
+        }
+        &.active {
+            color:#676767;
+            & ~ .random {
+                color:#999;
+            }
+        }
+        &:before {
+            content:"^";
+            font-family:"Courier New", Courier, monospace;
+            display:inline-block;
+            position:relative;
+            margin-right:0.35em;
+            margin-left:0.2em;
+            opacity:0;
+            transition:all 0.15s linear;
+        }
+        &.active:before {
+            opacity:1;
+            transform:rotate(180deg);
+            top:-0.3em;
+            right:-0.25em;
+        }
+        &.active.reversed:before {
+            opacity:1;
+            transform:none;
+            top:0.1em;
+            right:-0.25em;
+        }
+        &:hover, &:hover.random {
+            color:#787878;
+        }
+    }
+}
+
+.zoom-controls {
+    text-align:right;
+    width:25%;
+    position:relative;
+    padding-right:0.15em;
+    .zoom-plus, .zoom-minus {
+        cursor:pointer;
+        font-family:"Courier New", Courier, monospace;
+        box-sizing:border-box;
+        display:inline-block;
+        width:1.14em;
+        height:1.14em;
+        text-align:center;
+        border:1px solid #999;
+        border-radius:0.7em;
+        transition:all 0.15s linear;
+        &:hover {
+            background-color:#FFF;
+        }
+    }
+    &.minZoom .zoom-reset, &.maxZoom .zoom-reset {
+        cursor:pointer;
+    }
+    &.minZoom .zoom-minus, &.minZoom .zoom-minus:hover, &.maxZoom .zoom-plus, &.maxZoom .zoom-plus:hover {
+        pointer-events:none;
+        background-color:#999;
+        opacity:0.5;
+    }
+}

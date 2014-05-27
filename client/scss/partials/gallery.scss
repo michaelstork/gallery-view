@@ -1,0 +1,32 @@
+.gallery-thumbnails {
+    padding-bottom:4rem;
+    .loader {
+        @include loader;
+        font-size:1.25em;
+        position:relative;
+        margin-top:5em;
+        & > li {
+           background-color:rgba(0,0,0,0.5);
+        }
+    }
+}
+
+.gallery-rows {
+    overflow:hidden;
+}
+
+.gallery-row {
+    position:relative;
+    overflow:hidden;
+    line-height:0;
+    white-space:nowrap;
+    border-right:$border;
+    .gallery-loaded & {
+        border-color:#FFF;
+    }
+    &:last-child {
+        background-color:transparent;
+        border-right:none;
+    }
+}
+

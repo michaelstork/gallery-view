@@ -1,0 +1,93 @@
+
+.thumbnail-cont {
+    display:inline-block;
+    position:relative;
+    border-bottom:$border;
+    border-left:$border;
+    .gallery-loaded & {
+        border-color:#FFF;
+    }
+    cursor:pointer;
+    overflow:hidden;
+    .gallery-row:first-child & {
+        border-top:$border;
+        .gallery-loaded & {
+            border-color:#FFF;
+        }
+    }
+    .gallery-row:last-child &:last-child {
+        border-right:$border;
+        .gallery-loaded & {
+            border-color:#FFF;
+        }
+    }
+    .loader {
+        @include loader;
+        font-size:1em;
+        & > li {
+            background-color:rgba(0,0,0,0.5);
+        }
+    }
+    .preview-cont & {
+        border:none;
+    }
+}
+
+.thumbnail-cont.thumbnail-loaded {
+    img.gallery-thumbnail {
+        opacity:1;
+    }
+}
+
+img.gallery-thumbnail {
+    transition-property:opacity, height;
+    transition-duration:0.15s, 0.25s;
+    transition-delay:0.25s, 0;
+    transition-timing-function:linear;
+    opacity:0;
+    width:auto;
+    z-index:0;
+    position:relative;
+}
+
+.thumbnail-info {
+    opacity:0;
+    width:100%;
+    box-sizing:border-box;
+    overflow:hidden;
+    position:absolute;
+    right:0;
+    bottom:0;
+    z-index:1;
+    background-color:rgba(0,0,0,0.55);
+    height:1.75em;
+    line-height:1.75em;
+    transition-property:opacity;
+    transition-duration:0.25s;
+    transition-timing-function:linear;
+    color:#FFF;
+    font-size:0.8em;
+    font-family:$pt;
+    .gallery-loaded .thumbnail-cont.show-info & {
+        opacity:1;
+    }
+    .thumbnail-title {
+        position:absolute;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        left:-100%;
+        top:0;
+        bottom:0;
+        width:100%;
+        margin:auto;
+        transition-property:left;
+        transition-duration:0.15s;
+        transition-timing-function:linear;
+        padding-left:1.25em;
+        box-sizing:border-box;
+        .gallery-loaded .thumbnail-cont.show-info & {
+            left:0;
+        }
+    }
+} 

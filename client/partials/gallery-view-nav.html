@@ -1,0 +1,9 @@
+<div hover-timer="300" hover-class="nav-menu-open" class="nav-menu-cont">
+    <span class="nav-menu-header">GALLERIES</span>
+    <span class="nav-menu-indicator"><span></span><span></span></span>
+    <ul ng-style="menuStyle" class="nav-menu">
+        <li ng-repeat="gallery in galleries | currentGalleryFirst">
+            <a href="#/{{gallery}}">{{ gallery }}</a>
+        </li>
+    </ul>
+</div>
