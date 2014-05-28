@@ -2,7 +2,7 @@
 
 The project consists of an image processing API written in PHP with [Laravel 4](http://laravel.com), and a client-side app created with [AngularJS](http://angularjs.org). Currently just a side project, and a work in progress.
 
-The objective is to provide a simple photo gallery application that is capable of displaying large, high resolution photos in an efficient manner. The API allows for images to be requested at dimensions specific to the client/device and takes advantage of caching in order to reduce bandwith and loading times. Thumbnails are generated automatically from full resolution photo files, the location of which can be set in _/api/app/config/gallery-view.php._
+The objective is to provide a simple photo gallery application that is capable of displaying large, high resolution photos in an efficient manner. The API allows for images to be requested at dimensions specific to the client/device and takes advantage of caching in order to reduce bandwith and loading times. Thumbnails are generated automatically from full resolution photo files, the location of which can be set in `/api/app/config/gallery-view.php`.
 
 ---
 ### [Try it out](http://mstork.info/gallery-view)
@@ -18,22 +18,22 @@ For demo purposes, the galleries have been populated with my personal photograph
 ---
 ### API Routes
 
-##### _gallery-view-api/..._
+##### `gallery-view-api`/
 
 * ##### /galleries
 Get all gallery titles
 
-* ##### /{gallery}
-Get thumbnails from specified gallery
+* ##### /`{gallery}`
+Get all thumbnails from specified gallery
 
-* ##### /{gallery}/{filename}
+* ##### /`{gallery}`/`{filename}`
 Get specified photo at full resolution
 
-* ##### /{gallery}/{filename}/{width}x{height}
+* ##### /`{gallery}`/`{filename}`/`{width}`x`{height}`
 Get specified photo at maximum dimensions {width} and {height}
 
-* ##### /previews/{n}
+* ##### /previews/`{n}`
 Get n randomly selected thumbnails from each gallery
 
-* ##### /{gallery}/preview OR /preview/{gallery}
+* ##### /`{gallery}`/preview
 Get 3 randomly selected thumbnails from the specified gallery
