@@ -24,6 +24,7 @@ gulp.task('default', ['concat-libs-js-dev', 'concat-app-js-dev', 'concat-css'], 
 gulp.task('prod', ['concat-libs-js-prod', 'concat-app-js-prod', 'concat-css-prod'], function () {
     gulp.src(['./js/partials/libs.js', './js/partials/app.js'])
         .pipe(concat('gallery-view.js'))
+        .pipe(uglify({mangle:false}))
         .pipe(gulp.dest('./js/'));
 });
 
