@@ -62,6 +62,7 @@ class Photo {
 
 		$response = Response::make($i, 200);
 		$response->headers->set('content-type', 'image/jpeg');
+		$response->headers->set('Cache-Control', 'public; max-age=31536000');
 
 		return $response;
 
