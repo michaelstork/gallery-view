@@ -18,22 +18,22 @@ For demo purposes, the galleries have been populated with my personal photograph
 ---
 ### API Routes
 
-##### `gallery-view-api`/
+##### `gallery-view-api` /
 
 * ##### /galleries
 Get all gallery titles
 
-* ##### /`{gallery}`
+* ##### / `{gallery}`
 Get all thumbnails from specified gallery
 
-* ##### /`{gallery}`/`{filename}`
+* ##### / `{gallery}` / `{filename}`
 Get specified photo at full resolution
 
-* ##### /`{gallery}`/`{filename}`/`{width}`x`{height}`
+* ##### / `{gallery}` / `{filename}` / `{width}` x `{height}`
 Get specified photo at maximum dimensions {width} and {height}
 
-* ##### /previews/`{n}`
+* ##### /previews/ `{n}`
 Get n randomly selected thumbnails from each gallery
 
-* ##### /`{gallery}`/preview
+* ##### / `{gallery}` /preview
 Get 3 randomly selected thumbnails from the specified gallery
