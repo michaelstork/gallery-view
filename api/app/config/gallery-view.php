@@ -2,14 +2,14 @@
 
     return array(
 
-        // full resolution photos
-        'images_path' => '/home/michael/gallery-view/photos/',
+        // path to full resolution photos
+        'images_path' => '',
 
-        // thumbnails directory - must be public
-        'thumbnails_path' => '/home/michael/gallery-view/api/public/images/thumbnails/',
+        // path to thumbnails directory - must be public
+        'thumbnails_path' => '',
 
         // uri to thumbnails directory
-        'thumbnails_uri'  => asset('images/thumbnails') . '/',
+        'thumbnails_uri'  => asset('') . '/',
 
         // maximum height of generated thumbnails
         'thumbnail_max_height' => 400,
