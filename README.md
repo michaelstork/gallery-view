@@ -2,7 +2,7 @@
 
 The project consists of an image processing API written in PHP with [Laravel 4](http://laravel.com), and a client-side app created with [AngularJS](http://angularjs.org). Currently just a side project, and a work in progress.
 
-The objective is to provide a simple photo gallery application that is capable of displaying large, high resolution photos in an efficient manner. The API allows for images to be requested at dimensions specific to the client/device and takes advantage of caching in order to reduce bandwith and loading times. Thumbnails are generated automatically from full resolution photo files, the location of which can be set in `/api/app/config/gallery-view.php`.
+The objective is to provide a simple photo gallery application that is capable of displaying large, high resolution photos in an efficient manner. The API  allows for images to be requested at specific dimensions and takes advantage of caching in order to reduce loading times. Thumbnails are generated automatically from full resolution photo files.
 
 ---
 ### [Try it out](http://mstork.info/gallery-view)
