@@ -21,8 +21,7 @@ app.directive('photoViewer', ['galleryViewService', '$stateParams', '$document',
                 $scope.$apply();
             });
 
-            $scope.keyHandler = keyHandler.bind(null, $scope);
-            $document.on('keydown', $scope.keyHandler);
+            $document.on('keydown', keyHandler.bind(null, $scope));
 
             // Click on background closes photo
             element.on('click', backToGallery);
@@ -40,7 +39,7 @@ app.directive('photoViewer', ['galleryViewService', '$stateParams', '$document',
 
             $scope.$on('$destroy', function () {
             // clean up keybinding
-                $document.off('keydown', $scope.keyHandler);
+                $document.off('keydown');
             });
 
             // Next/Previous arrows

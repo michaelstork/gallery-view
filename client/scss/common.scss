@@ -4,19 +4,18 @@
 $border:8px solid transparent;
 $bg:desaturate(#F9EFBE, 75%);
 $navHeight:2.5em;
-$trebuchet:'Trebuchet MS', sans-serif;
+$footerHeight:30em;
 $josefin:"josefin_sansregular", sans-serif;
 $josefinBold:"josefin_sansbold", sans-serif;
 $pt:"PT Sans", sans-serif;
 $dark:#484848;
 $darker:#373737;
 $darkest:#252525;
-$notdark:lighten($dark, 40%);
-$light:lighten($bg, 20%);
+
 html {
     height:100%;
 }
-$footerHeight:30em;
+
 body {
     min-height:100%;
     position:relative;

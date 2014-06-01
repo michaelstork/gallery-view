@@ -76,7 +76,9 @@ app.service('galleryViewService', ['$http', '$q', 'galleryViewAPI', 'photoFrameS
     };
 
     this.getPhotoURI = function(gallery, filename, offset) {
+
         if (offset) filename = this.getNextPhotoFilename(gallery, filename, offset);
+
         if (filename) {
             return [galleryViewAPI + gallery, filename, photoFrameService.dimensions.join('x')].join('/');
         } else {

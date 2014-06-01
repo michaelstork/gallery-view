@@ -12,7 +12,7 @@ app.controller('GalleryRowsCtrl', ['$scope', function ($scope) {
         }
     });
 
-    // Reflow gallery when window is resized - event broadcast from galleryViewService
+    // Reflow gallery when window is resized - event broadcast by galleryViewService
     $scope.$on('resize', function (event, direction) {
         if (direction !== 'vertical') $scope.reflowGallery();
     });
