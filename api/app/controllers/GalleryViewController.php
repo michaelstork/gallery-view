@@ -13,19 +13,7 @@ class GalleryViewController extends BaseController {
      */
     public static function info()
     {
-        echo 'Routes:
-        <br><br>/galleries
-        <br>Get all gallery titles
-        <br><br>/{gallery}
-        <br>Get thumbnails from specified gallery
-        <br><br>/{gallery}/{filename}
-        <br>Get specified photo at full resolution
-        <br><br>/{gallery}/{filename}/{width}x{height}
-        <br>Get specified photo at maximum dimensions {width} and {height}
-        <br><br>/previews/{n}
-        <br>Get n randomly selected thumbnails from each gallery
-        <br><br>/{gallery}/preview OR /preview/{gallery}
-        <br>Get 3 randomly selected thumbnails from the specified gallery';
+        return View::make('info');
     }
 
     /**
