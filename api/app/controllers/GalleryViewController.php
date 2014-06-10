@@ -53,7 +53,7 @@ class GalleryViewController extends BaseController {
 
             if ($this->enable_cache)
             {
-                Cache::forever('tn' . $title, $thumbnails, 120);
+                Cache::forever('tn' . $title, $thumbnails);
             }
 
         }
